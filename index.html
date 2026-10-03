@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RANDOM Items Shop</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.2.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2025.2.1/core.js"></script>
+
+  <style>
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+      background: url('images.jpg') no-repeat center center fixed;
+      background-size: cover;
+
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(0, 0, 255, 0.8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: rgba(0, 0, 100, 0.9);
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .menu-item input {
+      width: 50px;
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+
+      background: rgba(0, 125, 200);
+      color: white;
+
+      border: none;
+      border-radius: 6px;
+
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #602104;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 15px;
+
+      border: 1px solid #ddd;
+      border-radius: 6px;
+
+      background: #fafafa;
+    }
+
+    .sku-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sku-link a {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button py-click="create_order">
+    Place Order
+  </button>
+
+  <header>
+    <h1>RANDOM Items Shop</h1>
+    <p>Look for any item you would find useful!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Receipt Generator</a>
+    <a href="sku.html">SKU Generator</a>
+  </nav>
+
+  <div class="container">
+
+    <h2>Menu</h2>
+
+    <div class="menu-item">
+      <label>Stolen katana — £500</label>
+      <input type="checkbox" id="item1" value="500">
+    </div>
+
+    <div class="menu-item">
+      <label>Plastic revolver — £37.50</label>
+      <input type="checkbox" id="item2" value="37.50">
+    </div>
+
+    <div class="menu-item">
+      <label>Heavily used metal dagger — £50</label>
+      <input type="checkbox" id="item3" value="50">
+    </div>
+
+    <div class="menu-item">
+      <label>White cartoonish glove-shaped gun — £50</label>
+      <input type="checkbox" id="item4" value="50">
+    </div>
+
+    <div class="menu-item">
+      <label>Awesome feedbacking blue metal arm — £875</label>
+      <input type="checkbox" id="item5" value="875">
+    </div>
+
+    <button py-click="create_order">
+      Place Order
+    </button>
+
+    <div class="summary" id="show">
+      <p>Your receipt will appear here.</p>
+    </div>
+
+    <div class="sku-link">
+      <a href="sku.html">Go to SKU Generator →</a>
+    </div>
+
+  </div>
+
+  <script type="py" src="./main.py"></script>
+
+</body>
+
+</html>
